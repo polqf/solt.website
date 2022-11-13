@@ -1,4 +1,4 @@
-#extend("template"):
+#extend("template2"):
 
 #export("page-name"): Solt | Real Estate Investments #endexport
 #export("title"): #(title) #endexport

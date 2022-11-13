@@ -1,0 +1,20 @@
+#extend("template"):
+
+#export("page-name"): Solt | Real Estate Investments #endexport
+
+#export("body"):
+    <header id="home" align="center">
+        </br>
+        <h2>Are you investing in Real Estate?</h2>
+        <h1>Solt is for you!</h1>
+        </br>
+        </br>
+        <a href="https://polquintana.com" class="m-2"><img src="images/app-store.png" alt="phone" class="img-fluid" width="150px"></a>
+    </header>
+    </br>
+    </br>
+    <img src="images/promo-landscape.png" alt="phone" class="img-fluid">
+    <!-- // end .section -->    
+#endexport
+
+#endextend

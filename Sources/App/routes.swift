@@ -3,7 +3,7 @@ import Vapor
 /// Register your application's routes here.
 public func routes(_ app: Application) throws {
     app.get { req in
-        return try goHome(req)
+        return goHome(req)
     }
 
     app.get("privacidad") { req -> EventLoopFuture<View> in
@@ -11,6 +11,6 @@ public func routes(_ app: Application) throws {
     }
 }
 
-private func goHome(_ req: Request) throws -> EventLoopFuture<View> {
-    return try req.view.render("blog-post", MarkdownView(post: .soltES))
+private func goHome(_ req: Request) -> EventLoopFuture<View> {
+    return req.view.render("landing")
 }
