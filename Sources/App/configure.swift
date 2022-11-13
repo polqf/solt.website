@@ -9,6 +9,8 @@ public func configure(_ app: Application) throws {
     // Register routes to the router
     try routes(app)
 
+    // Since solt is now a subdomain of polquintana.com, we need to move it away from polquintana's port (8080) for
+    // them not to clash
     app.http.server.configuration.port = 9090
 
     // Register middleware

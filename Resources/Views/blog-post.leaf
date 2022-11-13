@@ -1,6 +1,6 @@
 #extend("template"):
 
-#export("page-name"):  #(title) | Blog #endexport
+#export("page-name"): Solt | Real Estate Investments #endexport
 #export("title"): #(title) #endexport
 #export("subtitle"): #(date) #endexport
 
