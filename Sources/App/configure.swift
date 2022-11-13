@@ -9,6 +9,8 @@ public func configure(_ app: Application) throws {
     // Register routes to the router
     try routes(app)
 
+    app.http.server.configuration.port = 9090
+
     // Register middleware
     app.middleware.use(FileMiddleware(publicDirectory: app.directory.publicDirectory))
     app.middleware.use(ErrorMiddleware.default(environment: app.environment))
