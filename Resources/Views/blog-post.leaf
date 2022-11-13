@@ -1,0 +1,17 @@
+#extend("template"):
+
+#export("page-name"):  #(title) | Blog #endexport
+#export("title"): #(title) #endexport
+#export("subtitle"): #(date) #endexport
+
+#export("body"):
+<div class="blog">
+    #markdown(markdown)
+</div>
+<section id="footer">
+    <a href="https://twitter.com/solt_app?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-dnt="true" data-show-count="false">Follow @solt_app</a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</section>
+#endexport
+
+#endextend
