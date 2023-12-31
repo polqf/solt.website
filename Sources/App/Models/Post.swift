@@ -52,4 +52,13 @@ extension Post {
                     isPublic: true,
                     tags: ["Solt", "Privacy"])
     }
+
+    static var yearInReviewPrivacy: Post {
+        return Post(id: "year-in-review-privacy",
+                    title: "2023 In Review",
+                    description: "Privacy Policy",
+                    date: "Privacy Policy",
+                    isPublic: true,
+                    tags: ["2023inreview", "Privacy"])
+    }
 }
