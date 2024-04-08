@@ -5,7 +5,7 @@
              "appIDs": [ "NZUF2BUMTT.com.polquintana.Solt" ],
              "components": [
                {
-                  "/": "/property/*",
+                  "/": "*",
                   "comment": "Matches any URL with a path that starts with /property/."
                },
              ]
