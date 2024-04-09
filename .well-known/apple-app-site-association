@@ -1,15 +1,17 @@
 {
-  "applinks": {
-      "details": [
-           {
-             "appIDs": [ "NZUF2BUMTT.com.polquintana.Solt" ],
-             "components": [
-               {
-                  "/": "*",
-                  "comment": "Matches any URL with a path that starts with /property/."
-               },
-             ]
-           }
-       ]
-   }
+    "applinks": {
+        "details": [
+            {
+                "appIDs": [
+                    "NZUF2BUMTT.com.polquintana.Solt"
+                ],
+                "components": [
+                    {
+                        "/": "*",
+                        "comment": "Matches any URL with a path that starts with /property/."
+                    }
+                ]
+            }
+        ]
+    }
 }
