@@ -1,0 +1,53 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import PricingCard from "@components/pricing.astro";
+
+const pricing = [
+  {
+    name: "Solt",
+    price: "Free",
+    popular: false,
+    features: [
+      "Efficient Portfolio Management",
+      "Profit Insights",
+      "Financial Clarity",
+      "Cost Breakdown",
+    ],
+  },
+  {
+    name: "Solt PRO",
+    price: {
+      monthly: "$1.99/mo",
+      annual: "$16.99",
+      discount: "29%",
+      original: "",
+    },
+    popular: true,
+    features: [
+      "Efficient Portfolio Management",
+      "Profit Insights",
+      "Financial Clarity",
+      "Cost Breakdown",
+      "Cash Flow Projections",
+      "Portfolio Insights",
+      "Price Analysis Tools",
+      "Efficient Property Management"
+    ]
+  }
+];
+---
+
+<Container>
+  <Sectionhead>
+    <Fragment slot="title">Flexible Pricing</Fragment>
+    <Fragment slot="desc">
+      Maximize your real estate investment strategy with Solt's pricing plans.
+    </Fragment>
+  </Sectionhead>
+
+  <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-screen-lg mt-12">
+    {pricing.map((item) => <PricingCard plan={item} />)}
+  </div>
+</Container>

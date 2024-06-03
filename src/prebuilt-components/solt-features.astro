@@ -1,0 +1,22 @@
+---
+import { getCollection } from "astro:content";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Features from "@components/features.astro";
+
+// Filter team entries with 'draft: false' & date before current date
+const publishedTeamMembers = await getCollection("team", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+---
+
+<Container>
+  <Sectionhead>
+    <Fragment slot="title">Explore Solt's Extensive Features</Fragment>
+    <Fragment slot="desc">
+     Unlock the Power of Real Estate Analytics.
+    </Fragment>
+  </Sectionhead>
+
+  <Features />
+</Container>

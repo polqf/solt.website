@@ -1,0 +1,25 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import SoltPrivacyContent from "prebuilt-components/solt-privacy-content.astro";
+
+---
+
+<Layout title="Privacy Policy">
+  <Container>
+    <div class="mx-auto max-w-3xl mt-14">
+      <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
+        Privacy Policy
+      </span>
+      <h1
+        class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-1 lg:leading-tight">
+        Solt
+      </h1>
+    </div>
+
+    <div class="mx-auto prose prose-lg mt-6 max-w-3xl">
+      <SoltPrivacyContent/>
+    </div>
+  </Container>
+</Layout>

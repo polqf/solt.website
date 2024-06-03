@@ -1,0 +1,88 @@
+---
+import { getCollection } from "astro:content";
+import { Picture } from "astro:assets";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import ProImage1 from "/public/images/pro/pro1_EN.png";
+import ProImage2 from "/public/images/pro/pro2_EN.png";
+import ProImage3 from "/public/images/pro/pro3_EN.png";
+import ProImage4 from "/public/images/pro/pro4_EN.png";
+import ProImage5 from "/public/images/pro/pro5_EN.png";
+import ProImage6 from "/public/images/pro/pro6_EN.png";
+
+
+const soltProFeatures = [
+  {
+    title: "",
+    description: "",
+    imageURL: ProImage1,
+  },
+  {
+    title: "",
+    description: "",
+    imageURL: ProImage2,
+  },
+  {
+    title: "",
+    description: "",
+    imageURL: ProImage3,
+  },
+  {
+    title: "",
+    description: "",
+    imageURL: ProImage4,
+  },
+  {
+    title: "",
+    description: "",
+    imageURL: ProImage5,
+  },
+  {
+    title: "",
+    description: "",
+    imageURL: ProImage6,
+  },
+];
+
+
+// Filter team entries with 'draft: false' & date before current date
+const publishedTeamMembers = await getCollection("team", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+---
+
+<Container>
+  
+  <Sectionhead>
+    <Fragment slot="title">PRO Features preview</Fragment>
+    <Fragment slot="desc">
+      Go even further with Solt PRO!
+    </Fragment>
+  </Sectionhead>
+
+  <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
+    {
+      soltProFeatures.map((feature) => (
+        <div class="group">
+          <div class="w-full aspect-square">
+            <Picture
+              src={feature.imageURL}
+              alt={feature.title}
+              sizes="(max-width: 800px) 100vw, 400px"
+              width={400}
+              height={400}
+              class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-cover object-center aspect-square"
+            />
+          </div>
+
+          <div class="mt-4 text-center">
+            <h2 class="text-lg text-gray-800">{feature.title}</h2>
+            <h3 class="text-sm text-slate-500">
+              {feature.description}
+            </h3>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</Container>
